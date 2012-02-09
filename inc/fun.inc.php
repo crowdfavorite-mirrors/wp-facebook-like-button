@@ -17,17 +17,17 @@ function Add_Site_Name(){
 	$parent_title = get_the_title($post->post_parent);
 	$prem = get_permalink(get_the_ID());
 	$post_by_id = get_post(get_the_ID(), ARRAY_A);
-        if(function_exists('get_post_thumbnail_id'))
-        {
-        $image_id = get_post_thumbnail_id();
-        $image_url = wp_get_attachment_image_src($image_id,'large');
-        $image_url = $image_url[0];
-        }
-        else
-        {
-            $image_url = '';
-        }
-	  
+	if(function_exists('get_post_thumbnail_id'))
+	{
+		$image_id = get_post_thumbnail_id();
+		$image_url = wp_get_attachment_image_src($image_id,'large');
+		$image_url = $image_url[0];
+	}
+	else
+	{
+		$image_url = '';
+	}
+	$image_url = apply_filters('FB_Like_Image_Url', $image_url, $post_by_id);
 	
 	$Defualt_Image = ($image_url == '' ? get_option('fb_like_dimage') : $image_url);
 	
