@@ -62,7 +62,7 @@ function Add_Site_Name(){
 	<meta property="og:url" content="'.$prem.'"/>
 	';
 	$Title .= '
-		<meta property="og:description" content="'.@htmlentities(@trim(substr(strip_tags($post_by_id['post_content']), 0, 140))).'"/>
+		<meta property="og:description" content="'.esc_attr(@trim(substr(strip_tags($post_by_id['post_content']), 0, 140))).'"/>
 	';
 	}
 	
