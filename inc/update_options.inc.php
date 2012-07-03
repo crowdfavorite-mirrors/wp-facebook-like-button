@@ -102,7 +102,7 @@ if (isset($_POST['sub'])) {
     if (isset($_POST["fblikes_font"])) {
         update_option("fblikes_font", $_POST["fblikes_font"]);
     }
-?><div id="message" class="updated fade"><p><strong><?php _e('Settings Has Been Saved!') ?></strong></p></div><?php
+?><div id="message" class="updated fade"><p><strong><?php _e('Settings Have Been Saved!') ?></strong></p></div><?php
 }
 // End Save Settings
 

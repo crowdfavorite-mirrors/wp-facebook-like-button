@@ -7,155 +7,11 @@ Descrption: Form the admin layout.
 
 
 
- $Layout = '
- 
-            
-			 
-	          <div class="wrap">
-			  <div class="has-sidebar">					
-			
-              <form action = "" method = "POST" id="form">
-	          <h2>Facebook Like Button</h2>
-			  <h3>Live Preview</h3>
-			  <span id="live"></span>
-			  <div class="has-sidebar-content" id="post-body-content">
-			<h3 class="hndle"><span>General SettingsSettings</span></h3>
-		  <table>
-			  <tr>
-				  <td>
-				  App ID: 
-				  </td>
-				  <td>
-				  <input type="text" name="appid" size="30" value = "' . $Value['appid'] .
-        '"/> <a href="http://developers.facebook.com/setup/" target="_blank" title="Register Your Site on Facebook">Don&rsquo;t have one?</a>
-				  </td>
-			  </tr>
-			  
-			  <tr>
-				  <td>
-				  Type: 
-				  </td>
-			  </tr>
-			  <tr>
-				  <td><label for="xfbml">XFBML:</label><input type="radio" id="xfbml" name="type" value="xfbml" ' .
-        $xfbml . '/></td>
-				  <td><label for="iframe">iFrame:</label><input type="radio" id="iframe" name="type" value="iframe" ' .
-        $iframe . '/></td>
-			  </tr>
-			  	  <tr>
-			  <td>Show in Home:</td><td><input type = "checkbox" name = "home" value = "true" '.$home.'></td>
-			  </tr>
-			  <tr>
-			  <td>Show in Pages:</td><td><input type = "checkbox" name = "page" value = "true" '.$page.'></td>
-			  </tr>
-			  <tr>
-			  <td>Show in Posts:</td><td><input type = "checkbox" name = "post" value = "true" '.$post.'></td>
-			  </tr>
-              <tr>
-              <td>
-              Position:
-              </td>
-              <td>
-              <select name = "pos" value="$pos" id="pos">
-              <option value = "after" ' . $after . '>
-              After Content
-              </option>
-              <option value = "before" ' . $before . '>
-              Before Content
-              </option>
-              <option value = "baf" ' . $baf . '>
-              Before and after content
-              </option>
-              </select>
-              </td>
-              </tr>
-              <tr><td><label for="fblikes_locale">Language:</label></td>
-                  <td><select name="fblikes_locale" id="fblikes_locale">';
-if (get_option("fblikes_locale") == "default") {
-    $Layout .= '<option value="default" selected="selected">Default</option>';
-} else {
-    $Layout .= '<option value="default">Default</option>';
-}
-
 $fblikes_locales = fblikes_get_locales();
 $selectedLocale = get_option("fblikes_locale");
-foreach($fblikes_locales as $locale => $language) {
-    if ($locale == $selectedLocale) {
-        $Layout .= '<option value="' . htmlentities($locale) .'" selected="selected">'. htmlentities($language) .'</option>';
-    } else {
-        $Layout .= '<option value="' . htmlentities($locale) .'">'. htmlentities($language) .'</option>';
-    }
-}
 
 $Layout = '
-  <style>
-				.layout{
-					
-					float: right;
-					position:absolute;
-					padding: 1em;
-					top:210px;
-					right:50px;
-					border: 1px solid #CCC;
-					border-radius: 5px;
 
-				   -moz-border-radius: 5px;
-				
-				   -webkit-border-radius: 5px;
-				   -webkit-box-shadow: 1px 1px 10px #939393;
-	               -moz-box-shadow: 1px 1px 10px #939393;
-	               box-shadow: 1px 1px 10px #939393;
-					
-					
-				}
-				
-				.layout input[type=submit]{
-				
-				cursor:pointer !important
-					
-				}
-				.settings input[type=submit]{
-				
-				cursor:pointer !important
-					
-				}
-				.settings{
-					padding: 1em;
-					float: left;
-					position:absolute;
-					top:210px;
-					border: 1px solid #CCC;
-					
-					border-radius: 5px;
-
-				   -moz-border-radius: 5px;
-				
-				   -webkit-border-radius: 5px;
-				   -webkit-box-shadow: 1px 1px 10px #939393;
-	               -moz-box-shadow: 1px 1px 10px #939393;
-	               box-shadow: 1px 1px 10px #939393;
-				   z-index:1000;
-				}
-				
-				.api{
-					padding: 5px;
-					float: right;
-					position:absolute;
-					top:140px;
-					right: 50px;
-					background: #daffd9;
-					border: 1px solid #CCC;
-					
-					border-radius: 5px;
-
-				   -moz-border-radius: 5px;
-				
-				   -webkit-border-radius: 5px;
-				   -webkit-box-shadow: 1px 1px 10px #939393;
-	               -moz-box-shadow: 1px 1px 10px #939393;
-	               box-shadow: 1px 1px 10px #939393;	
-				}
-             </style>
 			 <script>
 			 
 $(document).ready(function(){
@@ -204,8 +60,8 @@ $(document).ready(function(){
 				<div class="inside">
 				<p>
 				<a href="http://blog.ahmedgeek.com/facebook-like-button-for-wordpress-v4"  target = "_blank"><b>Plugin Homepage</b></a><br /><br />
-				<b>Facebook</b> : <a href="http://www.facebook.com/pages/Ahmed-The-Geek/164004377590?ref=ts" target = "_blank">Developer\'s Page</a><br />
-				<b>Twitter</b> : <a href="http://twitter.com/valodes"  target = "_blank">@valodes</a><br />
+				<b>Facebook</b> : <a href="http://www.facebook.com/AhmedTheGeek" target = "_blank">Developer\'s Page</a><br />
+				<b>Twitter</b> : <a href="http://twitter.com/AhmedGeek"  target = "_blank">@AhmedGeek</a><br />
 				</p>
 				
 				
@@ -522,15 +378,5 @@ $Layout .= '
 		</form>	
 		<br>
 		</div>
-
-
-
-	
-	
 	';
-	
-
-	
-
-
 ?>

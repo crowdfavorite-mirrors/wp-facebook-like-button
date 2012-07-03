@@ -4,7 +4,7 @@
 Plugin Name: Facebook Like
 Plugin URI: http://www.ahmedgeek.com/facebook-like-button-v5-0-major-update
 Description: Add the new Facebook Like button and Facebook Recommendations widget to your wordpress blog.
-Version: 5.9.5
+Version: 5.9.6
 Author: Ahmed Hussein
 Author URI: http://www.ahmedgeek.com
 License: GPL2
@@ -40,7 +40,7 @@ include_once(ABSPATH . "wp-content/plugins/facebook-like-button/inc/rec_page.php
 include_once(ABSPATH . "wp-content/plugins/facebook-like-button/inc/rec_widget.php");
 include_once(ABSPATH . "wp-content/plugins/facebook-like-button/inc/rec_wid_layout.php");
 include_once(ABSPATH . "wp-content/plugins/facebook-like-button/inc/disable_pages.php");
-
+include_once(ABSPATH . "wp-content/plugins/facebook-like-button/inc/wedding_message.php");
 
 function FB_Admin_Box()
 {
@@ -49,10 +49,14 @@ function FB_Admin_Box()
         "FB_Admin_Cont");
 
 }
-
-
+if($_GET['action'] == "closeWedding")
+{
+	update_option('fbGeekWedding', 1);
+}
 
 add_option("fblikes_locale", "default");
+add_option("fbGeekWedding", 0);
+
 add_option("fblikes_font", "");
 add_action('admin_menu', 'FB_Admin_Box');
 add_action('admin_menu', 'Add_Rec_Admin');
@@ -67,4 +71,5 @@ add_shortcode('fb_rec', array('Widget_Layout', 'Layout'));
 add_action('wp_head', 'Add_Site_Name');
 add_action('dbx_page_advanced', 'Add_Pages_meta_box' );
 
+add_action('admin_notices', 'showWeddingMessage');
 ?>
