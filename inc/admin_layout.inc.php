@@ -70,48 +70,10 @@ $(document).ready(function(){
 			
 			
 			
-			<div class="postbox">
-		<h3 class="hndle"><span>Donate with Moneybookers</span></h3>
+	<div class="postbox">
+		<h3 class="hndle"><span>Indiegogo Geek Wedding</span></h3>
 		<div class="inside">
-			<p align="">
-			
-			<form action="https://www.moneybookers.com/app/payment.pl" method="post" target="_blank">
-			<input type="hidden" name="pay_to_email" value="me@ahmedgeek.com">
-			Please enter the amount you would like to give<br>
-			<input type="hidden" name="return_url" value="http://www.blog.ahmedgeek.com/thanks">
-			<input type="hidden" name="language" value="EN">
-			<table>
-			<tr>
-			<td>Currency:</td>
-			<td>
-			<select name="currency" size="1">
-			<option>Select a currency</option>
-			<option value="USD">US dollar</option>
-			<option value="GBP">GB pound</option>
-			<option value="EUR">Euro</option>
-			<option value="JPY">Yen</option>
-			<option value="CAD">Canadian $</option>
-			<option value="AUD">Australian $</option>
-			</select>
-			</td>
-			</tr>
-			<tr>
-			<td>Amount:</td>
-			<!–<input type="hidden" name="amount" value="5.00">–>
-			<td><input type="text" name="amount" value="5.00" size="10"></td>
-			<input type="hidden" name="detail1_description" value="Donation To Help Facebook Like Button for WP">
-			
-			<input type="hidden" name="detail1_text" value="Donation To Help Facebook Like Button for WP">
-			<br>
-			<br>
-			</tr>
-			<tr>
-			<td><input type="submit" alt="Donate" value="Donate!" /></td>
-			</tr>
-			</table>
-</form>
-			</p>
-		
+			<center><iframe src="http://www.indiegogo.com/project/323657/widget/2240075" width="224px" height="486px" frameborder="0" scrolling="no"></iframe></center>
 		</div>
 	</div>
 	
@@ -284,7 +246,7 @@ $Layout .= '
 		  </table>
 		  </div>
 		  </div>
-		  </div>
+		  
 		  
 		  <div class="postbox">
 				<h3 class="hndle"><span>Layout Settings:</span></h3>
@@ -377,6 +339,6 @@ $Layout .= '
          
 		</form>	
 		<br>
-		</div>
+		</div></div>
 	';
 ?>

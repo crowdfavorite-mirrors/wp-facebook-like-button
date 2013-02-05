@@ -1,10 +1,10 @@
 === Facebook Like Button===
-Contributors: Ahmed Hussein
-Donate link: http://www.ahmedgeek.com/
+Contributors: AhmedGeek
+Donate link: http://www.indiegogo.com/TheGeekWedding/x/2240075
 Tags: Share, Facebook, Button, Like
 Requires at least: 2.5
-Tested up to: 3.2.2
-Stable tag: 5.9.6
+Tested up to: 3.5
+Stable tag: 5.9.71
 
 Add the new Facebook Like button and Facebook Recommendations widget to your wordpress blog.
 
@@ -33,6 +33,13 @@ Mulitple language support, you can change the button language to your language i
 
 
 == Changelog ==
+
+= 5.9.71 =
+* Adding Indiegogo Campaign Video and Status to the Plugin Control Panel (Help Make it Happen Check your Like Button Settings Panel)
+* Fixing Control Panel Bug
+
+= 5.9.7 =
+* Removing Wedding Banner
 
 = 5.9.6 =
 * Bug Fix.
@@ -327,6 +334,8 @@ Bugs Fixed.
 = 5.9.5.3 =
 * Fast Bug Fix.
 
-
 = 5.9.6 =
 * Bug Fix.
+
+= 5.9.7 =
+* Removing Wedding Banner
